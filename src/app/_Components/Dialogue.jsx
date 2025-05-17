@@ -6,28 +6,6 @@ import { Roboto } from "next/font/google";
 
 const roboto = Roboto({ subsets: ["latin"] });
 
-export default function Dialogue() {
-  const welcomeVoice = useRef(null);
-  const bgMusic = useRef(null);
-
-  useEffect(() => {
-    if (welcomeVoice.current) {
-      setTimeout(() => {
-        welcomeVoice.current.play().catch((e) => {
-          console.warn("Autoplay blocked:", e);
-        });
-      }, 13000);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (bgMusic.current) {
-      bgMusic.current.volume = 0.4;
-      bgMusic.current.play().catch((e) => {
-        console.warn("Autoplay blocked:", e);
-      });
-    }
-  }, []);
 
   return (
     <div
@@ -37,8 +15,6 @@ export default function Dialogue() {
       <DialogueAnswer />
       <DialogueAnswer />
       <DialogueAnswer />
-      <audio ref={welcomeVoice} src="/voice/welcome-to-boltfolio2.mp3" />
-      <audio ref={bgMusic} src="/ethereal-soundtrack-short2.mp3" />
     </div>
   );
 }
