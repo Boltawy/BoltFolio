@@ -16,7 +16,7 @@ export default function Dialogue() {
         welcomeVoice.current.play().catch((e) => {
           console.warn("Autoplay blocked:", e);
         });
-      }, 8500);
+      }, 11000);
     }
   }, []);
 
