@@ -22,7 +22,7 @@ export default function Dialogue() {
 
   useEffect(() => {
     if (bgMusic.current) {
-      bgMusic.current.volume = 0.2;
+      bgMusic.current.volume = 0.4;
       bgMusic.current.play().catch((e) => {
         console.warn("Autoplay blocked:", e);
       });
@@ -38,7 +38,7 @@ export default function Dialogue() {
       <DialogueAnswer />
       <DialogueAnswer />
       <audio ref={welcomeVoice} src="/voice/welcome-to-boltfolio2.mp3" />
-      <audio ref={bgMusic} src="/ethereal-soundtrack.m4a" />
+      <audio ref={bgMusic} src="/ethereal-soundtrack-short2.mp3" />
     </div>
   );
 }
