@@ -1,9 +1,11 @@
+"use client"
 import Image from "next/image";
 import Dialogue from "./_Components/Dialogue.jsx";
 import Button from "./_Components/Button.jsx";
 import VantaBackground from "./_Components/VantaBackground.jsx";
+import { useEffect, useRef } from "react";
 
-export default function Dialogue() {
+export default function Home() {
   const welcomeVoice = useRef(null);
   const bgMusic = useRef(null);
 
@@ -19,14 +21,12 @@ export default function Dialogue() {
 
   useEffect(() => {
     if (bgMusic.current) {
-      bgMusic.current.volume = 0.5;
+      bgMusic.current.volume = 0.7;
       bgMusic.current.play().catch((e) => {
         console.warn("Autoplay blocked:", e);
       });
     }
   }, []);
-
-export default function Home() {
   return (
     <>
       <VantaBackground></VantaBackground>
