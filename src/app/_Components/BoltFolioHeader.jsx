@@ -31,7 +31,7 @@ export default function BoltFolioHeader() {
     // style={{ animationDuration: "20s", animationDelay: "1s", animationTimingFunction: "cubic-bezier(.12,.47,0,.95)" }}
     // >
     <h1
-      className={`animate__animated animate__fadeIn text-8xl  pt-16 font-bold text-gray-600 text-shadow-2xs text-center align-bottom block`}
+      className={`animate__animated animate__fadeIn text-8xl  pt-16 font-bold text-gray-600 text-shadow-2xs text-center align-bottom block select-none`}
       style={{
         fontFamily: play.style.fontFamily,
         animationDuration: "5s",
