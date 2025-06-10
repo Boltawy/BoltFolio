@@ -8,7 +8,7 @@ import "animate.css";
 import BoltFolioHeader from "./_Components/BoltFolioHeader.jsx";
 import GlassContainer from "./_Components/GlassContainer.jsx";
 
-export default function Home() {
+export default function Interactive() {
   const welcomeVoice = useRef(null);
   const bgMusic = useRef(null);
 
