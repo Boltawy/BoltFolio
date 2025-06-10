@@ -1,6 +1,5 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Sriracha } from "next/font/google";
 import "./globals.css";
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,13 +16,18 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const sricacha = Sriracha({
+  variable: "--font-sriracha",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
 export const metadata = {
   title: "BoltFolio",
   description: "An Interactive Experience.",
   icons: {
-    icon: '/favicon.svg',
+    icon: "/favicon.svg",
   },
-
 };
 
 export default function RootLayout({ children }) {
@@ -31,10 +35,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" href="/public/favicon.svg" />
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${sricacha.variable} antialiased`}
       >
         {children}
       </body>
