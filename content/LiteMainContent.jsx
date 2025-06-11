@@ -1,8 +1,9 @@
 import Line from "@/app/lite/Line.jsx";
 import P from "@/app/lite/P.jsx";
 import SocialBar from "@/app/lite/SocialBar.jsx";
-import TheJoyOfBuildingThings from "./TheJoyOfBuildingThings.jsx";
 import SubHeading from "@/app/lite/SubHeading.jsx";
+import MotivationContent from "./MotivationContent.jsx";
+import SectionTag from "@/app/lite/SectionTag.jsx";
 export default function LiteMainContent({ setInteractiveMode }) {
   return (
     <>
@@ -28,9 +29,9 @@ export default function LiteMainContent({ setInteractiveMode }) {
           taught myself to code, debug, and design — not because I had to, but
           because of a passion for computers and software.
         </P>
-        <TheJoyOfBuildingThings />
+        <MotivationContent />
         <Line />
-        <SubHeading>What Do I Know</SubHeading>
+        <SubHeading sectionTag="Skills">What Do I Know </SubHeading>
         <P>
           I've been learning <b>Frontend development</b> for almost 5 months,
           Doing practice projects and learning the <b>React Ecosystem</b>,{" "}
@@ -52,8 +53,10 @@ export default function LiteMainContent({ setInteractiveMode }) {
           <b>Node.js</b>, working toward becoming a <b>Full-Stack Developer</b>.
         </P>
         <Line />
+        <SubHeading className={"pb-4"}>To be continued...</SubHeading>
+        <Line/>
         <footer className="text-gray-200/50 text-center">
-          This portfolio is <b>heavily</b> {"  "} inspired by {"  "}
+          This portfolio is {"  "} inspired by {"  "}
           <a
             href="https://paco.me"
             target="_blank"

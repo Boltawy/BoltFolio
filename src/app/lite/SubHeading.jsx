@@ -1,7 +1,12 @@
-export default function SubHeading({ children }) {
+export default function SubHeading({ children, sectionTag, className }) {
   return (
-    <h2 className="font-semibold text-2xl text-gray-200/60 pt-8 pb-4 font-sriracha tracking-wider">
-      {children}
-    </h2>
+    <div className={"flex justify-between items-baseline" + " " + className}>
+      <h3 className="font-semibold  text-2xl text-gray-200/60 py-4 font-sriracha tracking-wider">
+        {children}
+      </h3>
+      <h2 className="text-gray-200/30 text-right -mb-[28px] text-lg pr-2 ">
+        {sectionTag}
+      </h2>
+    </div>
   );
 }

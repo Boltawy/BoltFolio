@@ -1,12 +1,14 @@
 import BlockQuote from "@/app/lite/BlockQuote.jsx";
 import P from "@/app/lite/P.jsx";
+import SectionTag from "@/app/lite/SectionTag.jsx";
 import SubHeading from "@/app/lite/SubHeading.jsx";
 import React from "react";
 
-export default function TheJoyOfBuildingThings() {
+export default function MotivationContent() {
   return (
     <section>
-      <SubHeading>The Joy of Building Things</SubHeading>
+      {/* <SectionTag>Motivation</SectionTag> */}
+      <SubHeading sectionTag={"Motivation"}>The Joy of Building Things</SubHeading>
       <P>
         There’s something deeply satisfying about building software, you start
         with an idea, will it be a million-dollar startup or a throwaway
