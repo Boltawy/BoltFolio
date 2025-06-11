@@ -10,7 +10,7 @@ export default function LiteMainContent({ setInteractiveMode }) {
         BoltFolio
       </h1>
       <p className="pb-8 text-gray-200/50">
-        This is a <i>simple</i> version of my portfolio, for the interactive
+        This is a <i>simplistic</i> version of my portfolio, for the interactive
         version,{" "}
         <button
           className=" underline underline-offset-4 cursor-pointer hover:text-gray-200"
@@ -41,8 +41,8 @@ export default function LiteMainContent({ setInteractiveMode }) {
         of libraries and make them work together
       </P>
       <BlockQuote>
-          I once tried to start a project with both TypeScript and
-          Redux, I've lasted three days before surrendering.
+        I once tried to start a project with both TypeScript and Redux, I've
+        lasted three days before surrendering.
       </BlockQuote>
       <P>
         But then... something just *<b>Clicks</b>*. The pieces finally fit
