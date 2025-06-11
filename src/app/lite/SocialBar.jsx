@@ -1,10 +1,21 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLetterboxd, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faLetterboxd,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faFilePdf } from "@fortawesome/free-solid-svg-icons";
-export default function SocialBar() {
+export default function SocialBar({ vertical = false }) {
+  let styling;
+  if (vertical)
+    styling = `flex flex-col justify-center fixed top-1/2 h-screen -translate-y-1/2 left-6  py-16 text-2xl gap-5 text-gray-200/50
+        before:content-[''] before:w-1 before:relative before:top-0 before:left-2 before:h-1/2 before:bg-gray-200/20
+      after:content-[''] after:w-1 after:relative after:bottom-0 after:left-2 after:h-1/2 after:bg-gray-200/20`;
+  else styling = `flex justify-center pt-4 text-2xl gap-5`;
+
   return (
     <>
-      <div className="flex justify-center pt-4 text-2xl gap-5">
+      <div className={styling}>
         <a
           href="https://www.linkedin.com/in/boltawy/"
           target="_blank"
@@ -26,13 +37,13 @@ export default function SocialBar() {
         >
           <FontAwesomeIcon icon={faEnvelope} />
         </a>
-        <div
-          href=""
+        <a
+          href={null}
           target="_blank"
           className="hover:text-gray-200 cursor-not-allowed"
         >
           <FontAwesomeIcon icon={faFilePdf} />
-        </div>
+        </a>
       </div>
     </>
   );

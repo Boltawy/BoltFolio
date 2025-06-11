@@ -1,10 +1,22 @@
 "use client";
 import LiteMainContent from "../../content/LiteMainContent.jsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Interactive from "./Interactive.jsx";
+import SocialBar from "./lite/SocialBar.jsx";
 
 export default function page() {
   const [interactiveMode, setInteractiveMode] = useState(false);
+
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    function updateSize() {
+      setIsMobile(window.innerWidth < 1124);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
   return (
     <>
       <div className="bg relative -z-10 select-text">
@@ -16,7 +28,7 @@ export default function page() {
       ) : (
         <LiteMainContent setInteractiveMode={setInteractiveMode} />
       )}
-      {/* <LiteMainContent setInteractiveMode={setInteractiveMode} /> */}
+      {!isMobile && <SocialBar vertical={true} />}
     </>
   );
 }
