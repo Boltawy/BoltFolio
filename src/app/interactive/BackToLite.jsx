@@ -28,7 +28,7 @@ export default function BackToLite({ setInteractiveMode }) {
   return (
     <button
       onClick={() => setInteractiveMode(false)}
-      className={`animate__animated animate__fadeIn text-6xl  pt-16 font-bold text-gray-500 text-shadow-2xs text-center align-bottom block select-none cursor-pointer`}
+      className={`animate__animated animate__fadeIn text-6xl  pt-16 font-bold text-gray-500 text-shadow-2xs text-center align-bottom block select-none cursor-pointer hover:text-gray-700`}
       style={{
         fontFamily: play.style.fontFamily,
         animationDuration: "3s",

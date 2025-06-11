@@ -1,13 +1,11 @@
 "use client";
-import Image from "next/image";
-import Dialogue from "./_Components/Dialogue.jsx";
-import Button from "./_Components/Button.jsx";
-import VantaBackground from "./_Components/VantaBackground.jsx";
+
 import { useEffect, useRef } from "react";
 import "animate.css";
-import BoltFolioHeader from "./_Components/BoltFolioHeader.jsx";
-import GlassContainer from "./_Components/GlassContainer.jsx";
-import BackToLite from "./_Components/BackToLite.jsx";
+import BackToLite from "./interactive/BackToLite.jsx";
+import BoltFolioHeader from "./interactive/BoltFolioHeader.jsx";
+import VantaBackground from "./interactive/VantaBackground.jsx";
+
 
 export default function Interactive({ setInteractiveMode }) {
   const welcomeVoice = useRef(null);

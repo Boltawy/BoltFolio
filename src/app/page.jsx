@@ -1,6 +1,4 @@
 "use client";
-import MDXLayout from "./_Components/MDXlayout.jsx";
-import Content from "./../../content/lite-main.mdx";
 import LiteMainContent from "../../content/LiteMainContent.jsx";
 import { useState } from "react";
 import Interactive from "./Interactive.jsx";
