@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLetterboxd, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faFilePdf } from "@fortawesome/free-solid-svg-icons";
 export default function SocialBar() {
   return (
     <>
@@ -26,6 +26,13 @@ export default function SocialBar() {
         >
           <FontAwesomeIcon icon={faEnvelope} />
         </a>
+        <div
+          href=""
+          target="_blank"
+          className="hover:text-gray-200 cursor-not-allowed"
+        >
+          <FontAwesomeIcon icon={faFilePdf} />
+        </div>
       </div>
     </>
   );
