@@ -2,10 +2,11 @@ import Line from "@/app/lite/Line.jsx";
 import P from "@/app/lite/P.jsx";
 import SubHeading from "@/app/lite/SubHeading.jsx";
 import SocialBar from "@/app/lite/SocialBar.jsx";
+import BlockQuote from "@/app/lite/BlockQuote.jsx";
 export default function LiteMainContent({ setInteractiveMode }) {
   return (
-    <main className="font-inter max-w-[510px] sm:max-w-xl  md:max-w-2xl lg:max-w-3xl px-6 mx-auto py-32 text-gray-200">
-      <h1 className="font-semibold text-3xl text-gray-200/60 pb-2 font-sriracha tracking-wider">
+    <main className="font-inter max-w-[510px] sm:max-w-xl  md:max-w-2xl lg:max-w-3xl px-6 mx-auto py-32 text-gray-200 leading-9">
+      <h1 className="font-semibold text-4xl text-gray-200/60 pb-2 font-sriracha tracking-wider">
         BoltFolio
       </h1>
       <p className="pb-8 text-gray-200/50">
@@ -39,12 +40,10 @@ export default function LiteMainContent({ setInteractiveMode }) {
         quirkiness of JS, to pulling your hair off from trying to integrate tens
         of libraries and make them work together
       </P>
-      <P opacity={50}>
-        <i>
-          I once tried to start a project with both TypeScript and Redux, I've
-          lasted three days before surrendering.
-        </i>
-      </P>
+      <BlockQuote>
+          I once tried to start a project with both TypeScript and
+          Redux, I've lasted three days before surrendering.
+      </BlockQuote>
       <P>
         But then... something just *<b>Clicks</b>*. The pieces finally fit
         together, the UI works, the logic runs, and suddenly you're staring at
@@ -64,7 +63,7 @@ export default function LiteMainContent({ setInteractiveMode }) {
         >
           Paco Coursey
         </a>
-        <SocialBar/>
+        <SocialBar />
       </footer>
     </main>
   );
