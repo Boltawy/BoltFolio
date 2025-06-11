@@ -22,7 +22,7 @@ export default function MotivationContent() {
       </P>
       <BlockQuote>
         I once tried to start a project with both TypeScript and Redux, i lasted
-        three days before surrendering.
+        three days before being overwhelmed by the sheer complexity.
       </BlockQuote>
       <P>
         But then... something just *<b>Clicks</b>*. The pieces finally fit
