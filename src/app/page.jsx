@@ -14,7 +14,7 @@ export default function page() {
         <div className="bg-[url('/simple-bg.png')] h-screen w-screen fixed inset-0"></div>
       </div>
       {interactiveMode ? (
-        <Interactive />
+        <Interactive setInteractiveMode={setInteractiveMode} />
       ) : (
         <LiteMainContent setInteractiveMode={setInteractiveMode} />
       )}

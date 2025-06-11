@@ -7,8 +7,9 @@ import { useEffect, useRef } from "react";
 import "animate.css";
 import BoltFolioHeader from "./_Components/BoltFolioHeader.jsx";
 import GlassContainer from "./_Components/GlassContainer.jsx";
+import BackToLite from "./_Components/BackToLite.jsx";
 
-export default function Interactive() {
+export default function Interactive({ setInteractiveMode }) {
   const welcomeVoice = useRef(null);
   const bgMusic = useRef(null);
 
@@ -33,8 +34,9 @@ export default function Interactive() {
   return (
     <>
       <VantaBackground></VantaBackground>
-      <div className="flex justify-center items-start pt-24 min-h-screen min-w-screen">
+      <div className="flex flex-col justify-center items-center pb-60 min-h-screen min-w-screen">
         <BoltFolioHeader />
+        <BackToLite setInteractiveMode={setInteractiveMode} />
       </div>
 
       <audio ref={welcomeVoice} src="/voice/coming-soon.mp3" />
