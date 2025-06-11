@@ -35,12 +35,12 @@ export default function LiteMainContent({ setInteractiveMode }) {
         <P>
           I've been learning <b>Frontend development</b> for almost 5 months,
           Doing practice projects and learning the <b>React Ecosystem</b>,{" "}
-          <b>Next.js</b>, <b>TailwindCSS</b>, And other tools.{" "}
+          <b>Next.js</b>, <b>Tailwind</b>, And other tools.{" "}
         </P>
         <P>
           So far, I’ve completed{" "}
           <a
-            href="https://spicy-tower.vercel.app"
+            href="https://github.com/Boltawy/Spicy-Tower"
             target="_blank"
             className="underline underline-offset-4 cursor-pointer hover:text-gray-200"
           >
