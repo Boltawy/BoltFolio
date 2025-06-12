@@ -8,7 +8,7 @@ export default function MotivationContent() {
   return (
     <section>
       {/* <SectionTag>Motivation</SectionTag> */}
-      <SubHeading sectionTag={"Motivation"}>The Joy of Building Things</SubHeading>
+      <SubHeading sectionTag={"Motivation"}>The joy of building things</SubHeading>
       <P>
         There’s something deeply satisfying about building software, you start
         with an idea, will it be a million-dollar startup or a throwaway

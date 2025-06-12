@@ -11,7 +11,7 @@ export default function LiteMainContent({ setInteractiveMode }) {
         <h1 className="font-semibold text-4xl text-gray-200/60 pb-1 font-sriracha tracking-wider">
           BoltFolio
         </h1>
-        <p className="pb-4 text-gray-200/50">
+        <p className="pb-4 text-gray-200/50 leading-6">
           This is the <i>simplistic</i> version of my portfolio, the interactive
           version{" "}
           <button
@@ -23,15 +23,17 @@ export default function LiteMainContent({ setInteractiveMode }) {
           .
         </p>
         <Line />
+        <SubHeading sectionTag="About">Hello world, it's me</SubHeading>
         <P>
-          Coming from a non-CS background, I am entering tech to fulfill the joy
-          of building things and providing solutions for everyday problems. I’ve
-          taught myself to code, debug, and design — not because I had to, but
-          because of a passion for computers and software.
+          Coming from a non-CS background, I’ve always been drawn to the world of
+          software and computers. What began as curiosity grew into a passion
+          for building things and solving problems in code, I made the intentional decision to pursue a career in tech, I’ve taught myself how
+          to program, debug, and design not out of necessity, but out of passion and curiosity.
         </P>
+        <Line />
         <MotivationContent />
         <Line />
-        <SubHeading sectionTag="Skills">What Do I Know </SubHeading>
+        <SubHeading sectionTag="Skills">What do I know </SubHeading>
         <P>
           I've been learning <b>Frontend development</b> for almost 5 months,
           Doing practice projects and learning the <b>React Ecosystem</b>,{" "}
@@ -46,7 +48,7 @@ export default function LiteMainContent({ setInteractiveMode }) {
           >
             <b>one project</b>
           </a>{" "}
-          that I fully consider my own and am actively working on more.
+          that I fully consider my own, and i am actively working on more.
         </P>
         <P>
           I'm currently diving into <b>Backend Development</b> with{" "}
@@ -54,7 +56,7 @@ export default function LiteMainContent({ setInteractiveMode }) {
         </P>
         <Line />
         <SubHeading className={"pb-4"}>To be continued...</SubHeading>
-        <Line/>
+        <Line />
         <footer className="text-gray-200/50 text-center">
           This portfolio is {"  "} inspired by {"  "}
           <a
