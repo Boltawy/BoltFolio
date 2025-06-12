@@ -12,7 +12,7 @@ export default function LiteMainContent({ setInteractiveMode }) {
           BoltFolio
         </h1>
         <p className="pb-6 text-gray-200/50 leading-6">
-          This is the <i>simplistic</i> version of my portfolio, the interactive
+          This is the <i>minimalistic</i> version of my portfolio, the interactive
           version{" "}
           <button
             className=" underline underline-offset-4 cursor-pointer hover:text-gray-200"
