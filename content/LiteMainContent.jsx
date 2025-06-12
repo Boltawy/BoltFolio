@@ -8,10 +8,10 @@ export default function LiteMainContent({ setInteractiveMode }) {
   return (
     <>
       <main className="font-inter max-w-[510px] sm:max-w-xl  md:max-w-2xl lg:max-w-3xl px-5 mx-auto py-32 leading-9">
-        <h1 className="font-semibold text-4xl text-gray-200/60 pb-1 font-sriracha tracking-wider">
+        <h1 className="font-semibold text-4xl text-gray-200/60 pb-2 font-sriracha tracking-wider">
           BoltFolio
         </h1>
-        <p className="pb-4 text-gray-200/50 leading-6">
+        <p className="pb-6 text-gray-200/50 leading-6">
           This is the <i>simplistic</i> version of my portfolio, the interactive
           version{" "}
           <button
@@ -25,10 +25,14 @@ export default function LiteMainContent({ setInteractiveMode }) {
         <Line />
         <SubHeading sectionTag="About">Hello world, it's me</SubHeading>
         <P>
-          Coming from a non-CS background, I’ve always been drawn to the world of
-          software and computers. What began as curiosity grew into a passion
-          for building things and solving problems in code, I made the intentional decision to pursue a career in tech, I’ve taught myself how
-          to program, debug, and design not out of necessity, but out of passion and curiosity.
+          Coming from a non-CS background, I’ve always been drawn to the world
+          of software and computers. What began as curiosity grew into a passion
+          for building things and solving problems in code, I made the
+          intentional decision to pursue a career in tech.
+        </P>
+        <P>
+          I’ve taught myself how to program, debug, and design not out of
+          necessity, but out of passion and curiosity.
         </P>
         <Line />
         <MotivationContent />
