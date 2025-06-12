@@ -11,21 +11,24 @@ export default function Nav() {
         before:content-[''] before:w-1 before:relative before:top-0 before:right-1 before:h-1/2 before:bg-gray-200/20
       after:content-[''] after:w-1 after:relative after:bottom-0 after:right-1 after:h-1/2 after:bg-gray-200/20"
     >
-      <li className="">
-        <Link className="hover:text-gray-200" href="#Home">
-          About
-        </Link>
-      </li>
-      <li>
-        <Link className="hover:text-gray-200" href="#Motivation">
-          Motivation
-        </Link>
-      </li>
-      <li>
-        <Link className="hover:text-gray-200" href="#Skills">
-          Skills
-        </Link>
-      </li>
+      <Link
+        className="hover:text-gray-200 inline-block w-full text-right"
+        href="#Home"
+      >
+        About
+      </Link>
+      <Link
+        className="hover:text-gray-200 inline-block w-full text-right"
+        href="#Motivation"
+      >
+        Motivation
+      </Link>
+      <Link
+        className="hover:text-gray-200 inline-block w-full text-right"
+        href="#Skills"
+      >
+        Skills
+      </Link>
     </ul>
   );
 }
