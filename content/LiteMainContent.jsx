@@ -7,7 +7,7 @@ import Section from "@/app/lite/Section.jsx";
 export default function LiteMainContent({ setInteractiveMode }) {
   return (
     <>
-      <main className="font-inter max-w-[510px] sm:max-w-xl  md:max-w-2xl lg:max-w-3xl px-5 mx-auto py-32 leading-9">
+      <main className="font-inter max-w-[510px] sm:max-w-xl  md:max-w-2xl lg:max-w-3xl px-5 mx-auto py-32">
         <h1
           className="font-semibold text-4xl text-gray-200/60 pb-2 font-sriracha tracking-wider"
           id="Home"
