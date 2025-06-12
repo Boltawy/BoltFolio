@@ -27,7 +27,7 @@ export const metadata = {
   title: "BoltFolio",
   description: "An Interactive Experience.",
   icons: {
-    icon: "/favicon.svg",
+    icon: "/bolt-favicon.svg",
   },
 };
 
@@ -35,7 +35,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/public/favicon.svg" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
       </head>
       <body
