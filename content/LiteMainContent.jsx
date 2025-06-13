@@ -8,12 +8,18 @@ export default function LiteMainContent({ setInteractiveMode }) {
   return (
     <>
       <main className="font-inter max-w-[510px] sm:max-w-xl  md:max-w-2xl lg:max-w-3xl px-5 mx-auto py-32">
-        <h1
+        {/* <h1
           className="font-semibold text-4xl text-gray-200/60 pb-2 font-sriracha tracking-wider"
           id="Home"
         >
-          <i className="icon-bolt-favicon font-icomoon">B</i>oltFolio
-        </h1>
+          <img
+            className="inline w-10 opacity-[55%] pr-0.5 relative bottom-0.5"
+            src="/bolt-favicon.svg"
+          />
+          oltFolio
+        </h1> */}
+        <img src="boltfolio-white.svg" alt="boltfolio logo" className="w-44 opacity-60 pb-3" />
+
         <p className="pb-6 text-gray-200/50 leading-6">
           This is the <i>minimalistic</i> version of my portfolio, the
           interactive version{" "}
@@ -21,9 +27,8 @@ export default function LiteMainContent({ setInteractiveMode }) {
             className=" underline underline-offset-4 cursor-pointer hover:text-gray-200"
             onClick={() => setInteractiveMode(true)}
           >
-            is in progress
+            is in progress.
           </button>
-          .
         </p>
         <Section>
           <SubHeading sectionTag="About">Hello world, it's me</SubHeading>
