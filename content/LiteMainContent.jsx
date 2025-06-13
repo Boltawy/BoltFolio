@@ -7,6 +7,8 @@ import Section from "@/app/lite/Section.jsx";
 import "../public/fonts/style.css";
 import B from "@/app/lite/B.jsx";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUpRightFromSquare, faWrench } from "@fortawesome/free-solid-svg-icons";
 
 export default function LiteMainContent({
   fullMode,
@@ -18,7 +20,7 @@ export default function LiteMainContent({
   const tools = [
     { name: "React", icon: "/icons/react.svg" },
     { name: "Next.js", icon: "/icons/next.svg" },
-    { name: "TailwindCSS", icon: "/icons/tailwind.svg" },
+    { name: "Tailwind", icon: "/icons/tailwind.svg" },
     { name: "Express.js", icon: "/icons/express.svg" },
     { name: "MongoDB", icon: "/icons/mongodb.svg" },
   ];
@@ -51,7 +53,7 @@ export default function LiteMainContent({
         </p>
         <Line />
         <Section>
-          <SubHeading sectionTag="Overview">Quick overview</SubHeading>
+          <SubHeading sectionTag="Overview">In a nutshell</SubHeading>
           <P className="text-gray-200 leading-6">
             Full-Stack Developer in progress, driven by a passion for software
             and building impactful projects, always learning, always growing.
@@ -66,12 +68,12 @@ export default function LiteMainContent({
                 <ul className="mb-4 ">
                   {tools.map((tool) => (
                     <li
-                      className="text-gray-200 leading-6 pb-2"
+                      className="text-gray-200 leading-6 pb-4"
                       key={tool.name}
                     >
                       <img
                         src={tool.icon}
-                        className="inline-block w-6 mr-2 fill-gray-200"
+                        className="inline-block w-6 mr-2 mb-1 fill-gray-200"
                       />
                       <B>{tool.name}</B>
                     </li>
@@ -84,10 +86,10 @@ export default function LiteMainContent({
                 </h4>
                 <ul className="mb-4">
                   {languages.map((lang) => (
-                    <li className="text-gray-200 leading-6 pb-2" key={lang.name}>
+                    <li className="text-gray-200 leading-6 pb-4" key={lang.name}>
                       <img
                         src={lang.icon}
-                        className="inline-block w-6 mr-2 fill-gray-200"
+                        className="inline-block w-6 mr-2 mb-1 fill-gray-200"
                       />
 
                       <B>{lang.name}</B>
@@ -99,22 +101,22 @@ export default function LiteMainContent({
             <div className="w-1/2 lg:w1/3">
               <h4 className="font-semibold text-gray-200/60 py-4">Projects</h4>
               <ul className="mb-4">
-                <li className="text-gray-200 leading-6 pb-2">
-                  <B>CRUD.jsx</B>
+                <li className="text-gray-200 leading-6 pb-4">
+                  <B>CRUD.jsx</B> <FontAwesomeIcon icon={faWrench} className="text-gray-200/50 text-xs relative bottom-1"/>
                   <p className="text-gray-200/50">
-                    a full-stack e-commerce app
+                    a full-stack e-commerce app, built in React and Nest.js.
                   </p>
                 </li>
                 <li className="text-gray-200 leading-6 pb-2">
-                  <B>Spicy Tower</B>
+                  <B><a href="https://github.com/Boltawy/spicy-tower" target="_blank" className="hover:underline underline-offset-4 ">Spicy Tower</a></B> <FontAwesomeIcon icon={faUpRightFromSquare} className="text-gray-200/50 text-xs relative bottom-1"/>
                   <p className="text-gray-200/50">
-                    a rage inducing game made with Kaplay.js{" "}
+                    a fun platformer game similar to icy tower, made with Kaplay.js.
                   </p>
                 </li>
                 <li className="text-gray-200 leading-6 pb-2">
-                  <B>Brutally Honest</B>
+                  <B>Unfiltered Truth</B> <FontAwesomeIcon icon={faWrench} className="text-gray-200/50 text-xs relative bottom-1"/>
                   <p className="text-gray-200/50">
-                    an annonymous messaging app
+                    an annonymous messaging app.
                   </p>
                 </li>
               </ul>
@@ -122,7 +124,7 @@ export default function LiteMainContent({
           </div>
           {!fullMode && (
             <button
-              className="text-gray-50 border border-gray-200/50 px-4 py-2 mb-8 block mx-auto  hover:bg-gray-200/10 active:bg-neutral-800 cursor-pointer"
+              className="text-gray-50 border border-gray-200/50 px-8 py-2 mb-8 block mx-auto  hover:bg-gray-200/10 active:bg-neutral-800 cursor-pointer"
               onClick={() => setFullMode(true)}
             >
               More about me
