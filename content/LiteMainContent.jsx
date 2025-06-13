@@ -8,7 +8,10 @@ import "../public/fonts/style.css";
 import B from "@/app/lite/B.jsx";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUpRightFromSquare, faWrench } from "@fortawesome/free-solid-svg-icons";
+import {
+  faUpRightFromSquare,
+  faWrench,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function LiteMainContent({
   fullMode,
@@ -86,7 +89,10 @@ export default function LiteMainContent({
                 </h4>
                 <ul className="mb-4">
                   {languages.map((lang) => (
-                    <li className="text-gray-200 leading-6 pb-4" key={lang.name}>
+                    <li
+                      className="text-gray-200 leading-6 pb-4"
+                      key={lang.name}
+                    >
                       <img
                         src={lang.icon}
                         className="inline-block w-6 mr-2 mb-1 fill-gray-200"
@@ -102,19 +108,40 @@ export default function LiteMainContent({
               <h4 className="font-semibold text-gray-200/60 py-4">Projects</h4>
               <ul className="mb-4">
                 <li className="text-gray-200 leading-6 pb-4">
-                  <B>CRUD.jsx</B> <FontAwesomeIcon icon={faWrench} className="text-gray-200/50 text-xs relative bottom-1"/>
+                  <B>CRUD.jsx</B>{" "}
+                  <FontAwesomeIcon
+                    icon={faWrench}
+                    className=" hidden text-gray-200/50 text-xs relative bottom-1 block"
+                  />
                   <p className="text-gray-200/50">
                     a full-stack e-commerce app, built in React and Nest.js.
                   </p>
                 </li>
                 <li className="text-gray-200 leading-6 pb-2">
-                  <B><a href="https://github.com/Boltawy/spicy-tower" target="_blank" className="hover:underline underline-offset-4 ">Spicy Tower</a></B> <FontAwesomeIcon icon={faUpRightFromSquare} className="text-gray-200/50 text-xs relative bottom-1"/>
+                  <B>
+                    <a
+                      href="https://github.com/Boltawy/spicy-tower"
+                      target="_blank"
+                      className="hover:underline underline-offset-4 "
+                    >
+                      Spicy Tower
+                    </a>
+                  </B>{" "}
+                  <FontAwesomeIcon
+                    icon={faUpRightFromSquare}
+                    className=" hidden text-gray-200/50 text-xs relative bottom-1 block"
+                  />
                   <p className="text-gray-200/50">
-                    a fun platformer game similar to icy tower, made with Kaplay.js.
+                    a fun platformer game similar to icy tower, made with
+                    Kaplay.js.
                   </p>
                 </li>
                 <li className="text-gray-200 leading-6 pb-2">
-                  <B>Unfiltered Truth</B> <FontAwesomeIcon icon={faWrench} className="text-gray-200/50 text-xs relative bottom-1"/>
+                  <B>Unfiltered Truth</B>{" "}
+                  <FontAwesomeIcon
+                    icon={faWrench}
+                    className=" hidden text-gray-200/50 text-xs relative bottom-1 block"
+                  />
                   <p className="text-gray-200/50">
                     an annonymous messaging app.
                   </p>
