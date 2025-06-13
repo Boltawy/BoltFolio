@@ -12,7 +12,7 @@ export default function LiteMainContent({ setInteractiveMode }) {
           className="font-semibold text-4xl text-gray-200/60 pb-2 font-sriracha tracking-wider"
           id="Home"
         >
-          BoltFolio
+          <i className="icon-bolt-favicon font-icomoon">B</i>oltFolio
         </h1>
         <p className="pb-6 text-gray-200/50 leading-6">
           This is the <i>minimalistic</i> version of my portfolio, the
@@ -65,16 +65,23 @@ export default function LiteMainContent({ setInteractiveMode }) {
         </Section>
         <SubHeading className={"pb-4"}>To be continued...</SubHeading>
         <Line />
-        <footer className="text-gray-200/50 text-center">
-          This portfolio is {"  "} inspired by {"  "}
-          <a
-            href="https://paco.me"
-            target="_blank"
-            className="underline underline-offset-4 whitespace-nowrap hover:text-gray-50"
-          >
-            Paco Coursey
-          </a>
-          <SocialBar />
+        <footer className="text-gray-200/50 text-center flex flex-col items-center">
+          <div>
+            This portfolio is {"  "} inspired by {"  "}
+            <a
+              href="https://paco.me"
+              target="_blank"
+              className="underline underline-offset-4 whitespace-nowrap hover:text-gray-50"
+            >
+              Paco Coursey
+            </a>
+            <SocialBar />
+          </div>
+          <img
+            src="/bolt-favicon.svg"
+            className="w-16 opacity-50 pt-12 -mb-12"
+            alt="a bolt illustration"
+          />
         </footer>
       </main>
     </>
