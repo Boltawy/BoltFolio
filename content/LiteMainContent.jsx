@@ -4,21 +4,24 @@ import SocialBar from "@/app/lite/SocialBar.jsx";
 import SubHeading from "@/app/lite/SubHeading.jsx";
 import MotivationContent from "./MotivationContent.jsx";
 import Section from "@/app/lite/Section.jsx";
+import "../public/fonts/style.css";
 export default function LiteMainContent({ setInteractiveMode }) {
   return (
     <>
       <main className="font-inter max-w-[510px] sm:max-w-xl  md:max-w-2xl lg:max-w-3xl px-5 mx-auto py-32">
-        {/* <h1
-          className="font-semibold text-4xl text-gray-200/60 pb-2 font-sriracha tracking-wider"
+        <h1
+          className="font-bold text-4xl text-gray-200/60 pb-2 font-sriracha tracking-[2.5px]"
           id="Home"
         >
-          <img
-            className="inline w-10 opacity-[55%] pr-0.5 relative bottom-0.5"
-            src="/bolt-favicon.svg"
-          />
-          oltFolio
-        </h1> */}
-        <img src="boltfolio-white.svg" alt="boltfolio logo" className="w-44 opacity-60 pb-3" />
+          <span className="icon-bolt-favicon text-[1.85rem]">B</span>
+          oltfolio
+        </h1>
+
+        {/* <img
+          src="boltfolio-white.svg"
+          alt="boltfolio logo"
+          className="w-44 opacity-60 pb-3"
+        /> */}
 
         <p className="pb-6 text-gray-200/50 leading-6">
           This is the <i>minimalistic</i> version of my portfolio, the
@@ -31,7 +34,9 @@ export default function LiteMainContent({ setInteractiveMode }) {
           </button>
         </p>
         <Section>
-          <SubHeading sectionTag="About">Hello world, it's me</SubHeading>
+          <SubHeading sectionTag="About">
+            Hello world, <span className="whitespace-nowrap">it's me</span>
+          </SubHeading>
           <P>
             Coming from a non-CS background, I’ve always been drawn to the world
             of software and computers. What began as curiosity grew into a
@@ -71,7 +76,7 @@ export default function LiteMainContent({ setInteractiveMode }) {
         <SubHeading className={"pb-4"}>To be continued...</SubHeading>
         <Line />
         <footer className="text-gray-200/50 text-center flex flex-col items-center">
-          <div>
+          <P className="text-gray-200/50">
             This portfolio is {"  "} inspired by {"  "}
             <a
               href="https://paco.me"
@@ -80,8 +85,8 @@ export default function LiteMainContent({ setInteractiveMode }) {
             >
               Paco Coursey
             </a>
-            <SocialBar />
-          </div>
+          </P>
+          <SocialBar />
           <img
             src="/bolt-favicon.svg"
             className="w-16 opacity-50 pt-12 -mb-12"

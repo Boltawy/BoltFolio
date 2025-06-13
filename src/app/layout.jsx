@@ -24,8 +24,8 @@ const sricacha = Sriracha({
 });
 
 export const metadata = {
-  title: "BoltFolio",
-  description: "An Interactive Experience.",
+  title: "Boltfolio",
+  description: "A minimalistic or interactive experience",
   icons: {
     icon: "/bolt-favicon.svg",
   },
@@ -33,7 +33,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth selection:bg-gray-500 selection:text-gray-50">
       <head>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
       </head>
