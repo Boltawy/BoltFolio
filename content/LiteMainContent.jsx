@@ -13,8 +13,20 @@ export default function LiteMainContent({
   setFullMode,
   setInteractiveMode,
 }) {
-  const tools = ["React", "Next.js", "TailwindCSS", "Express.js", "MongoDB"];
-  const languages = ["HTML/CSS", "JavaScript", "TypeScript"];
+  //   const tailwindsvg = `d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0"
+  // `;
+  const tools = [
+    { name: "React", icon: "/icons/react.svg" },
+    { name: "Next.js", icon: "/icons/next.svg" },
+    { name: "TailwindCSS", icon: "/icons/tailwind.svg" },
+    { name: "Express.js", icon: "/icons/express.svg" },
+    { name: "MongoDB", icon: "/icons/mongodb.svg" },
+  ];
+  const languages = [
+    { name: "HTML/CSS", icon: "/icons/html-css.svg" },
+    { name: "JavaScript", icon: "/icons/js.svg" },
+    { name: "TypeScript", icon: "/icons/ts.svg" },
+  ];
 
   return (
     <>
@@ -53,8 +65,15 @@ export default function LiteMainContent({
                 </h4>
                 <ul className="mb-4 ">
                   {tools.map((tool) => (
-                    <li className="text-gray-200 leading-6 pb-2" key={tool}>
-                      <B>{tool}</B>
+                    <li
+                      className="text-gray-200 leading-6 pb-2"
+                      key={tool.name}
+                    >
+                      <img
+                        src={tool.icon}
+                        className="inline-block w-6 mr-2 fill-gray-200"
+                      />
+                      <B>{tool.name}</B>
                     </li>
                   ))}
                 </ul>
@@ -65,8 +84,13 @@ export default function LiteMainContent({
                 </h4>
                 <ul className="mb-4">
                   {languages.map((lang) => (
-                    <li className="text-gray-200 leading-6 pb-2" key={lang}>
-                      <B>{lang}</B>
+                    <li className="text-gray-200 leading-6 pb-2" key={lang.name}>
+                      <img
+                        src={lang.icon}
+                        className="inline-block w-6 mr-2 fill-gray-200"
+                      />
+
+                      <B>{lang.name}</B>
                     </li>
                   ))}
                 </ul>
@@ -98,60 +122,69 @@ export default function LiteMainContent({
           </div>
           {!fullMode && (
             <button
-              className="text-gray-200 border border-gray-200/50 px-4 py-2 mb-8 block mx-auto  hover:bg-gray-200/10 cursor-pointer"
+              className="text-gray-50 border border-gray-200/50 px-4 py-2 mb-8 block mx-auto  hover:bg-gray-200/10 active:bg-neutral-800 cursor-pointer"
               onClick={() => setFullMode(true)}
             >
               More about me
             </button>
           )}
         </Section>
-          <div className={"animate__animated animate__fadeIn " + (fullMode ? "block" : "hidden")}>
-            <Section>
-              <SubHeading sectionTag="About">
-                Hello world, <span className="whitespace-nowrap">it's me</span>
-              </SubHeading>
-              <P>
-                Coming from a non-CS background, I’ve always been drawn to the
-                world of software and computers. What began as curiosity grew
-                into a passion for building things and solving problems in code,
-                I made the intentional decision to pursue a career in tech.
-              </P>
-              <P>
-                I’ve taught myself how to program, debug, and design, not out of
-                necessity, but out of passion and curiosity.
-              </P>
-            </Section>
-            <MotivationContent />
-            <Section>
-              <SubHeading sectionTag="Skills">What do I know </SubHeading>
-              <P>
-                I've been learning <B>Frontend development</B> for almost 5
-                months, Doing practice projects and learning the{" "}
-                <B>React Ecosystem</B>, <B>Next.js</B>, <B>Tailwind</B>, And
-                other tools.{" "}
-              </P>
-              <P>
-                So far, I’ve completed{" "}
-                <a
-                  href="https://github.com/Boltawy/Spicy-Tower"
-                  target="_blank"
-                  className="underline underline-offset-4 cursor-pointer hover:text-gray-200"
-                >
-                  <B>one project</B>
-                </a>{" "}
-                that I fully consider my own, and i am actively working on more.
-              </P>
-              <P>
-                I'm currently diving into <B>Backend Development</B> with{" "}
-                <B>Node.js</B>, working toward becoming a{" "}
-                <B>Full-Stack Developer</B>.
-              </P>
-            </Section>
-            <SubHeading className={"pb-4"}>To be continued...</SubHeading>
-            <Line />
-          </div>
+        <div
+          className={
+            "animate__animated animate__fadeIn " +
+            (fullMode ? "block" : "hidden")
+          }
+        >
+          <Section>
+            <SubHeading sectionTag="About">
+              Hello world, <span className="whitespace-nowrap">it's me</span>
+            </SubHeading>
+            <P>
+              Coming from a non-CS background, I’ve always been drawn to the
+              world of software and computers. What began as curiosity grew into
+              a passion for building things and solving problems in code, I made
+              the intentional decision to pursue a career in tech.
+            </P>
+            <P>
+              I’ve taught myself how to program, debug, and design, not out of
+              necessity, but out of passion and curiosity.
+            </P>
+          </Section>
+          <MotivationContent />
+          <Section>
+            <SubHeading sectionTag="Skills">What do I know </SubHeading>
+            <P>
+              I've been learning <B>Frontend development</B> for almost 5
+              months, Doing practice projects and learning the{" "}
+              <B>React Ecosystem</B>, <B>Next.js</B>, <B>Tailwind</B>, And other
+              tools.{" "}
+            </P>
+            <P>
+              So far, I’ve completed{" "}
+              <a
+                href="https://github.com/Boltawy/Spicy-Tower"
+                target="_blank"
+                className="underline underline-offset-4 cursor-pointer hover:text-gray-200"
+              >
+                <B>one project</B>
+              </a>{" "}
+              that I fully consider my own, and i am actively working on more.
+            </P>
+            <P>
+              I'm currently diving into <B>Backend Development</B> with{" "}
+              <B>Node.js</B>, working toward becoming a{" "}
+              <B>Full-Stack Developer</B>.
+            </P>
+          </Section>
+          <SubHeading className={"pb-4"}>To be continued...</SubHeading>
+          <Line />
+        </div>
 
         <footer className="text-gray-200/50 text-center flex flex-col items-center">
+          <P className="text-gray-200/50 italic">
+            “Perfection is achieved, not when there is nothing more to add, but
+            when there is nothing left to take away.”
+          </P>
           <P className="text-gray-200/50">
             This portfolio is {"  "} inspired by {"  "}
             <a
