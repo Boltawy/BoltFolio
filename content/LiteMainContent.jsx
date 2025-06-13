@@ -109,18 +109,6 @@ export default function LiteMainContent({
               <h4 className="font-semibold text-gray-200/60 py-4">Projects</h4>
               <ul className="mb-4">
                 <li className="text-gray-200 leading-6 pb-6">
-                  <a href={null} target="_blank" className="cursor-no-drop">
-                    <B>CRUD.jsx</B>
-                    <FontAwesomeIcon
-                      icon={faWrench}
-                      className=" hidden text-gray-200/50 text-[10px] relative bottom-1 pl-1 block"
-                    />
-                    <p className="text-gray-200/50">
-                      a full-stack e-commerce app, built in React and Nest.js.
-                    </p>
-                  </a>
-                </li>
-                <li className="text-gray-200 leading-6 pb-6">
                   <a
                     href="https://github.com/Boltawy/spicy-tower"
                     target="_blank"
@@ -136,6 +124,19 @@ export default function LiteMainContent({
                     </p>
                   </a>
                 </li>
+                <li className="text-gray-200 leading-6 pb-6">
+                  <a href={null} target="_blank" className="cursor-no-drop">
+                    <B>CRUD.jsx</B>
+                    <FontAwesomeIcon
+                      icon={faWrench}
+                      className=" hidden text-gray-200/50 text-[10px] relative bottom-1 pl-1 block"
+                    />
+                    <p className="text-gray-200/50">
+                      a full-stack e-commerce app, built in React and Nest.js.
+                    </p>
+                  </a>
+                </li>
+
                 <li className="text-gray-200 leading-6 pb-6">
                   <a href={null} target="_blank" className="cursor-no-drop">
                     <B>Unfiltered Truth</B>
