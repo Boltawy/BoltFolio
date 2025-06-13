@@ -20,6 +20,7 @@ export default function page() {
 
     return () => window.removeEventListener("resize", updateSize);
   }, []);
+  const [fullMode, setFullMode] = useState(false);
 
   return (
     <>
@@ -32,12 +33,13 @@ export default function page() {
         <SocialBar className="absolute top-6 left-1/2 -translate-x-1/2" />
       )}
       {!isMobile && isLoaded && <SocialBar vertical={true} />}
-      {!isMobile && isLoaded && <Nav />}
+      {!
+      isMobile && isLoaded && <Nav setFullMode={setFullMode} />}
 
       {interactiveMode ? (
         <Interactive setInteractiveMode={setInteractiveMode} />
       ) : (
-        <LiteMainContent setInteractiveMode={setInteractiveMode} />
+        <LiteMainContent fullMode={fullMode} setFullMode={setFullMode} setInteractiveMode={setInteractiveMode} />
       )}
     </>
   );

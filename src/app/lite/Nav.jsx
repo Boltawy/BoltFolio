@@ -2,7 +2,7 @@
 import Link from "next/link.js";
 import { usePathname } from "next/navigation.js";
 
-export default function Nav() {
+export default function Nav({setFullMode}) {
   const pathname = usePathname();
   const links = ["Overview", "About", "Motivation", "Skills"];
 
@@ -16,6 +16,7 @@ export default function Nav() {
         <Link
           key={link}
           href={`#${link}`}
+          onClick={() => setFullMode(true)}
           className={`hover:text-gray-200 inline-block w-full text-right ${
             pathname === `/#${link}` ? "text-gray-200" : "text-gray-200/50"
           }`}
