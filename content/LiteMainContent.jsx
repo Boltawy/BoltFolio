@@ -5,6 +5,8 @@ import SubHeading from "@/app/lite/SubHeading.jsx";
 import MotivationContent from "./MotivationContent.jsx";
 import Section from "@/app/lite/Section.jsx";
 import "../public/fonts/style.css";
+import B from "@/app/lite/B.jsx";
+
 export default function LiteMainContent({ setInteractiveMode }) {
   return (
     <>
@@ -17,12 +19,6 @@ export default function LiteMainContent({ setInteractiveMode }) {
           oltfolio
         </h1>
 
-        {/* <img
-          src="boltfolio-white.svg"
-          alt="boltfolio logo"
-          className="w-44 opacity-60 pb-3"
-        /> */}
-
         <p className="pb-6 text-gray-200/50 leading-6">
           This is the <i>minimalistic</i> version of my portfolio, the
           interactive version{" "}
@@ -33,6 +29,24 @@ export default function LiteMainContent({ setInteractiveMode }) {
             is in progress.
           </button>
         </p>
+        <Line />
+        {/* <Section>
+          <SubHeading sectionTag="Overview">Quick overview</SubHeading>
+          <ul className="list-disc mb-4">
+            <li className="text-gray-200 leading-6">
+              Full-Stack developer, proficient in:
+              <ul className="list-disc pl-4">
+                <li>
+                  <B>React</B>, <B>Next.js</B>, <B>Tailwind</B>.
+                </li>
+                <li>
+                  <B>Express</B>, <B>Nest.js</B>, <B>MongoDB</B>.
+                </li>
+                <li>and various others.</li>
+              </ul>
+            </li>
+          </ul>
+        </Section> */}
         <Section>
           <SubHeading sectionTag="About">
             Hello world, <span className="whitespace-nowrap">it's me</span>
@@ -52,9 +66,9 @@ export default function LiteMainContent({ setInteractiveMode }) {
         <Section>
           <SubHeading sectionTag="Skills">What do I know </SubHeading>
           <P>
-            I've been learning <b>Frontend development</b> for almost 5 months,
-            Doing practice projects and learning the <b>React Ecosystem</b>,{" "}
-            <b>Next.js</b>, <b>Tailwind</b>, And other tools.{" "}
+            I've been learning <B>Frontend development</B> for almost 5 months,
+            Doing practice projects and learning the <B>React Ecosystem</B>,{" "}
+            <B>Next.js</B>, <B>Tailwind</B>, And other tools.{" "}
           </P>
           <P>
             So far, I’ve completed{" "}
@@ -63,14 +77,14 @@ export default function LiteMainContent({ setInteractiveMode }) {
               target="_blank"
               className="underline underline-offset-4 cursor-pointer hover:text-gray-200"
             >
-              <b>one project</b>
+              <B>one project</B>
             </a>{" "}
             that I fully consider my own, and i am actively working on more.
           </P>
           <P>
-            I'm currently diving into <b>Backend Development</b> with{" "}
-            <b>Node.js</b>, working toward becoming a{" "}
-            <b>Full-Stack Developer</b>.
+            I'm currently diving into <B>Backend Development</B> with{" "}
+            <B>Node.js</B>, working toward becoming a{" "}
+            <B>Full-Stack Developer</B>.
           </P>
         </Section>
         <SubHeading className={"pb-4"}>To be continued...</SubHeading>

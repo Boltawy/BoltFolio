@@ -1,12 +1,13 @@
 import BlockQuote from "@/app/lite/BlockQuote.jsx";
 import P from "@/app/lite/P.jsx";
+import Section from "@/app/lite/Section.jsx";
 import SectionTag from "@/app/lite/SectionTag.jsx";
 import SubHeading from "@/app/lite/SubHeading.jsx";
 import React from "react";
 
 export default function MotivationContent() {
   return (
-    <section>
+    <Section>
       {/* <SectionTag>Motivation</SectionTag> */}
       <SubHeading sectionTag={"Motivation"}>The joy of building things</SubHeading>
       <P>
@@ -31,6 +32,6 @@ export default function MotivationContent() {
         competitive field, creating something from nothing, solving problems and
         seeing real results from my effort.
       </P>
-    </section>
+    </Section>
   );
 }

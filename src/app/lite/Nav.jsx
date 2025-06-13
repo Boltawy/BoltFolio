@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation.js";
 
 export default function Nav() {
   const pathname = usePathname();
-  const links = ["About", "Motivation", "Skills"];
+  const links = ["Overview", "About", "Motivation", "Skills"];
 
   return (
     <ul
