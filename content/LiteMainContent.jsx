@@ -45,7 +45,7 @@ export default function LiteMainContent({
           oltfolio
         </h1>
 
-        <p className="pb-6 text-gray-200/50 leading-6">
+        {/* <p className="pb-6 text-gray-200/50 leading-6">
           This is the <i>minimalistic</i> version of my portfolio, the
           interactive version{" "}
           <button
@@ -54,7 +54,7 @@ export default function LiteMainContent({
           >
             is in progress.
           </button>
-        </p>
+        </p> */}
         <Line />
         <Section>
           <SubHeading sectionTag="Overview">In a nutshell</SubHeading>
@@ -213,11 +213,11 @@ export default function LiteMainContent({
         </div>
 
         <footer className="text-gray-200/50 text-center flex flex-col items-center">
-          <P className="text-gray-200/50 italic">
+          <p className="text-gray-200/50 italic text-sm pb-4">
             “Perfection is achieved, not when there is nothing more to add, but
             when there is nothing left to take away.”
-          </P>
-          <P className="text-gray-200/50">
+          </p>
+          <P className="text-gray-200/50 text-sm">
             This portfolio is {"  "} inspired by {"  "}
             <a
               href="https://paco.me"
