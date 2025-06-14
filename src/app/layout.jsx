@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth selection:bg-gray-500 selection:text-gray-50">
       <head>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${sricacha.variable} antialiased`}

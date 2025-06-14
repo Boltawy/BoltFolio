@@ -30,17 +30,18 @@ export default function page() {
       </div>
 
       {isMobile && isLoaded && (
-        <SocialBar className="absolute top-6 left-1/2 -translate-x-1/2" />
+        <header>
+          <SocialBar className="absolute top-6 left-1/2 -translate-x-1/2" />
+        </header>
       )}
       {!isMobile && isLoaded && <SocialBar vertical={true} />}
-      {!
-      isMobile && isLoaded && <Nav setFullMode={setFullMode} />}
+      {!isMobile && isLoaded && <Nav setFullMode={setFullMode} />}
 
-      {interactiveMode ? (
-        <Interactive setInteractiveMode={setInteractiveMode} />
-      ) : (
-        <LiteMainContent fullMode={fullMode} setFullMode={setFullMode} setInteractiveMode={setInteractiveMode} />
-      )}
+      <LiteMainContent
+        fullMode={fullMode}
+        setFullMode={setFullMode}
+        setInteractiveMode={setInteractiveMode}
+      />
     </>
   );
 }
