@@ -57,7 +57,7 @@ export default function LiteMainContent({
         </p> */}
         <Line />
         <Section>
-          <SubHeading sectionTag="Overview">In a nutshell</SubHeading>
+          <SubHeading sectionTag="Overview">At a glance</SubHeading>
           <P className="text-gray-200 leading-6">
             Full-Stack Developer in progress, driven by a passion for software
             and building impactful projects, always learning, always growing.
