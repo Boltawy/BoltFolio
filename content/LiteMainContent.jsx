@@ -81,7 +81,6 @@ export default function LiteMainContent({
             and building impactful projects, always learning, always growing.
           </P>
           <div className="flex pb-8">
-            {/* <div className="w-1/3"></div> */}
             <div className="flex flex-col lg:flex-row w-1/2 lg:w-2/3">
               <div className="w-full lg:w-1/2">
                 <h4 className="font-semibold text-gray-200/60 py-4 pr-8">
