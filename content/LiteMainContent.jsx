@@ -50,7 +50,7 @@ export default function LiteMainContent({
       console.error("Copy failed", err);
     }
   };
-  
+
   return (
     <>
       <main className="font-inter max-w-[510px] sm:max-w-xl  md:max-w-2xl lg:max-w-3xl px-5 mx-auto pt-32">
@@ -238,25 +238,27 @@ export default function LiteMainContent({
             collaborations, or just chatting,
           </span>
           <br /> contact me at:{" "}
-          <a
-            href={"mailto:" + emailAddress}
-            className="underline underline-offset-[6px] text-gray-200/70 hover:text-gray-50 pr-1"
-          >
-            {emailAddress}
-          </a>
-          <button onClick={handleCopyEmail}>
-            {copied ? (
-              <FontAwesomeIcon
-                icon={faCheck}
-                className="hidden relative bottom-1 text-base text-gray-50 block animate_animated animate_fadeIn"
-              />
-            ) : (
-              <FontAwesomeIcon
-                icon={faCopy}
-                className="hidden relative bottom-1 text-base hover:text-gray-50 block animate_animated animate_fadeIn"
-              />
-            )}
-          </button>
+          <span className="whitespace-nowrap">
+            <a
+              href={"mailto:" + emailAddress}
+              className="underline underline-offset-[6px] text-gray-200/70 hover:text-gray-50 pr-1"
+            >
+              {emailAddress}
+            </a>
+            <button onClick={handleCopyEmail}>
+              {copied ? (
+                <FontAwesomeIcon
+                  icon={faCheck}
+                  className="hidden relative bottom-1 text-base text-gray-50 block animate_animated animate_fadeIn"
+                />
+              ) : (
+                <FontAwesomeIcon
+                  icon={faCopy}
+                  className="hidden relative bottom-1 text-base hover:text-gray-50 block animate_animated animate_fadeIn"
+                />
+              )}
+            </button>{" "}
+          </span>
         </P>
         <SocialBar />
         <img
