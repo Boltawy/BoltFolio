@@ -63,16 +63,6 @@ export default function LiteMainContent({
           oltfolio
         </h1>
 
-        {/* <p className="pb-6 text-gray-200/50 leading-6">
-          This is the <i>minimalistic</i> version of my portfolio, the
-          interactive version{" "}
-          <button
-            className=" underline underline-offset-4 cursor-pointer hover:text-gray-200"
-            onClick={() => setInteractiveMode(true)}
-          >
-            is in progress.
-          </button>
-        </p> */}
         <Line />
         <Section>
           <SubHeading sectionTag="Overview">At a glance</SubHeading>
@@ -231,7 +221,7 @@ export default function LiteMainContent({
           <Line />
         </div>
       </main>
-      <footer className="text-gray-200/50 text-center flex flex-col items-center mx-auto pt-12 pb-14 px-4">
+      <footer className="text-gray-200/50 text-center flex flex-col items-center mx-auto pt-6 pb-14 px-4">
         <P className="text-gray-200/50 text-base !pb-4 relative">
           I'm open to job opportunities,{" "}
           <NoWrap>collaborations, or just chatting,</NoWrap>
@@ -282,3 +272,17 @@ export default function LiteMainContent({
     </>
   );
 }
+
+
+
+
+        {/* <p className="pb-6 text-gray-200/50 leading-6">
+          This is the <i>minimalistic</i> version of my portfolio, the
+          interactive version{" "}
+          <button
+            className=" underline underline-offset-4 cursor-pointer hover:text-gray-200"
+            onClick={() => setInteractiveMode(true)}
+          >
+            is in progress.
+          </button>
+        </p> */}
