@@ -16,6 +16,7 @@ import {
   faUpRightFromSquare,
   faWrench,
 } from "@fortawesome/free-solid-svg-icons";
+import NoWrap from "@/app/lite/NoWrap.jsx";
 
 export default function LiteMainContent({
   fullMode,
@@ -188,7 +189,7 @@ export default function LiteMainContent({
         >
           <Section>
             <SubHeading sectionTag="About">
-              Hello world, <span className="whitespace-nowrap">it's me</span>
+              Hello world, <NoWrap>it's me</NoWrap>
             </SubHeading>
             <P>
               Coming from a non-CS background, I’ve always been drawn to the
@@ -234,11 +235,9 @@ export default function LiteMainContent({
       <footer className="text-gray-200/50 text-center flex flex-col items-center mx-auto pt-12 pb-14 px-4">
         <P className="text-gray-200/50 text-base !pb-4 relative">
           I'm open to job opportunities,{" "}
-          <span className="whitespace-nowrap">
-            collaborations, or just chatting,
-          </span>
+          <NoWrap>collaborations, or just chatting,</NoWrap>
           <br /> contact me at:{" "}
-          <span className="whitespace-nowrap">
+          <NoWrap>
             <a
               href={"mailto:" + emailAddress}
               className="underline underline-offset-[6px] text-gray-200/70 hover:text-gray-50 pr-1"
@@ -258,7 +257,7 @@ export default function LiteMainContent({
                 />
               )}
             </button>{" "}
-          </span>
+          </NoWrap>
         </P>
         <SocialBar />
         <img
