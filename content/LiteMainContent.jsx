@@ -6,9 +6,12 @@ import MotivationContent from "./MotivationContent.jsx";
 import Section from "@/app/lite/Section.jsx";
 import "../public/fonts/style.css";
 import B from "@/app/lite/B.jsx";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faCheck,
+  faClipboard,
+  faCopy,
   faTrowel,
   faUpRightFromSquare,
   faWrench,
@@ -34,9 +37,23 @@ export default function LiteMainContent({
     { name: "TypeScript", icon: "/icons/ts.svg", alt: "TypeScript logo" },
   ];
 
+  const [copied, setCopied] = useState(false);
+  const emailAddress = "boltawy.dev@gmail.com";
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(emailAddress);
+      setCopied(true);
+
+      setTimeout(() => setCopied(false), 4000);
+    } catch (err) {
+      console.error("Copy failed", err);
+    }
+  };
+  
   return (
     <>
-      <main className="font-inter max-w-[510px] sm:max-w-xl  md:max-w-2xl lg:max-w-3xl px-5 mx-auto py-32">
+      <main className="font-inter max-w-[510px] sm:max-w-xl  md:max-w-2xl lg:max-w-3xl px-5 mx-auto pt-32">
         <h1
           className="font-bold text-4xl text-gray-200/60 pb-2 font-sriracha tracking-[2.5px]"
           id="Home"
@@ -213,30 +230,55 @@ export default function LiteMainContent({
           <SubHeading className={"pb-4"}>To be continued...</SubHeading>
           <Line />
         </div>
-
-        <footer className="text-gray-200/50 text-center flex flex-col items-center">
-          <p className="text-gray-200/50 italic text-sm pb-4">
-            “Perfection is achieved, not when there is nothing more to add, but
-            when there is nothing left to take away.”
-          </p>
-          <P className="text-gray-200/50 text-sm">
-            This portfolio is {"  "} inspired by {"  "}
-            <a
-              href="https://paco.me"
-              target="_blank"
-              className="underline underline-offset-4 whitespace-nowrap hover:text-gray-50"
-            >
-              Paco Coursey
-            </a>
-          </P>
-          <SocialBar />
-          <img
-            src="/bolt-favicon.svg"
-            className="w-16 opacity-50 pt-12 -mb-12"
-            alt="a bolt illustration"
-          />
-        </footer>
       </main>
+      <footer className="text-gray-200/50 text-center flex flex-col items-center mx-auto pt-12 pb-14 px-4">
+        <P className="text-gray-200/50 text-base !pb-4 relative">
+          I'm open to job opportunities,{" "}
+          <span className="whitespace-nowrap">
+            collaborations, or just chatting,
+          </span>
+          <br /> contact me at:{" "}
+          <a
+            href={"mailto:" + emailAddress}
+            className="underline underline-offset-[6px] text-gray-200/70 hover:text-gray-50 pr-1"
+          >
+            {emailAddress}
+          </a>
+          <button onClick={handleCopyEmail}>
+            {copied ? (
+              <FontAwesomeIcon
+                icon={faCheck}
+                className="hidden relative bottom-1 text-base text-gray-50 block animate_animated animate_fadeIn"
+              />
+            ) : (
+              <FontAwesomeIcon
+                icon={faCopy}
+                className="hidden relative bottom-1 text-base hover:text-gray-50 block animate_animated animate_fadeIn"
+              />
+            )}
+          </button>
+        </P>
+        <SocialBar />
+        <img
+          src="/bolt-favicon.svg"
+          className="w-16 opacity-50 py-12  "
+          alt="boltawy logo"
+        />
+        <p className="text-gray-200/50 italic text-sm pb-4">
+          “Perfection is achieved, not when there is nothing more to add, but
+          when there is nothing left to take away.”
+        </p>
+        <P className="text-gray-200/50 text-sm">
+          This portfolio was inspired by {"  "}
+          <a
+            href="https://paco.me"
+            target="_blank"
+            className="underline underline-offset-4 whitespace-nowrap hover:text-gray-50"
+          >
+            Paco Coursey
+          </a>
+        </P>
+      </footer>
     </>
   );
 }
