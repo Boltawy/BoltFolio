@@ -32,7 +32,7 @@ export default function SocialBar({ vertical = false, className = "" }) {
           <FontAwesomeIcon icon={faGithub} />
         </a>
         <a
-          href="mailto:boltawyy@gmail.com"
+          href="mailto:boltawy.dev@gmail.com"
           target="_blank"
           className="hover:text-gray-200"
         >
