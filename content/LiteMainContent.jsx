@@ -267,16 +267,18 @@ export default function LiteMainContent({
           >
             Paco Coursey
           </a>
+          <FontAwesomeIcon
+            icon={faUpRightFromSquare}
+            className=" hidden text-gray-200/50 text-[10px] relative bottom-1 pl-1 block"
+          />
         </P>
       </footer>
     </>
   );
 }
 
-
-
-
-        {/* <p className="pb-6 text-gray-200/50 leading-6">
+{
+  /* <p className="pb-6 text-gray-200/50 leading-6">
           This is the <i>minimalistic</i> version of my portfolio, the
           interactive version{" "}
           <button
@@ -285,4 +287,5 @@ export default function LiteMainContent({
           >
             is in progress.
           </button>
-        </p> */}
+        </p> */
+}
