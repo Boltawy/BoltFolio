@@ -221,7 +221,7 @@ export default function LiteMainContent({
           <Line />
         </div>
       </main>
-      <footer className="text-gray-200/50 text-center flex flex-col items-center mx-auto pt-6 pb-14 px-4">
+      <footer className="text-gray-200/50 text-center flex flex-col items-center mx-auto pt-4 pb-14 px-4">
         <P className="text-gray-200/50 text-base !pb-4 relative">
           I'm open to job opportunities,{" "}
           <NoWrap>collaborations, or just chatting,</NoWrap>
